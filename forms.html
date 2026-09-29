@@ -12,7 +12,9 @@ document.getElementById('f').onsubmit=function(e){
  if(dept!=='Office & Operations') errors.push('Department: Office & Operations / Departamento: Office & Operations');
  if(sup!=='maria lopez') errors.push('Supervisor: Maria Lopez / Supervisora: Maria Lopez');
  if(action!=='report') errors.push('Safety response: Report it to the appropriate supervisor / Seguridad: Reportarlo al supervisor correspondiente');
- if(localStorage.getItem('trainingDone')!=='1'){errors.push('Complete assigned Workplace Safety Basics training first / Complete primero la capacitación asignada');}\n if(errors.length){alert('Please review these answers / Revise estas respuestas:\\n\\n'+errors.join('\\n'));return;}\n document.getElementById('done').style.display='block';
+ if(localStorage.getItem('trainingDone')!=='1'){errors.push('Complete assigned Workplace Safety Basics training first / Complete primero la capacitación asignada');}
+ if(errors.length){alert('Please review these answers / Revise estas respuestas:\\n\\n'+errors.join('\\n'));return;}
+ document.getElementById('done').style.display='block';
  localStorage.setItem('formsDone','1');
  document.getElementById('done').scrollIntoView({behavior:'smooth',block:'center'});
 };
